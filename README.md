@@ -62,7 +62,53 @@ MySQL Database
 
 ## ⚙️ How to Run Locally
 
+1. Clone the repository
+git clone https://github.com/Mohana247-svg/Student-management-system.git
+cd Student-management-system
+2. Create MySQL database
+CREATE DATABASE student_db;
+3. Update application.properties
+spring.datasource.url=jdbc:mysql://localhost:3306/student_db
+spring.datasource.username=your_username
+spring.datasource.password=your_password
+spring.jpa.hibernate.ddl-auto=update
+4. Run the application
+mvn spring-boot:run
+5. Open in browser
+http://localhost:8080/students
 
+---
+
+## 📡 API Endpoints
+
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | `/students` | List all students |
+| GET | `/students/new` | Show create form |
+| POST | `/students` | Save new student |
+| GET | `/students/edit/{id}` | Show edit form |
+| POST | `/students/{id}` | Update student |
+| GET | `/students/delete/{id}` | Delete student |
+
+---
+
+## ✅ What I Learned Building This
+
+- Implementing the full **MVC pattern** in a real Spring Boot application
+- Writing clean **service layer abstractions** with interface + implementation separation
+- Managing **MySQL schema** using JPA/Hibernate auto-DDL
+- Connecting **HTML frontend views** to backend using Thymeleaf
+- Using **Maven** for dependency management and build lifecycle
+- Following **REST conventions** for clean API design
+
+---
+
+## 👩‍💻 Author
+
+**Mohanachandrika Peruru**
+MCA Graduate | Java Developer | Spring Boot Enthusiast
+📧 p.mohanachandrika@gmail.com
+🔗 LinkedIn: linkedin.com/in/peruru-mohanachandrika
 
 
 
